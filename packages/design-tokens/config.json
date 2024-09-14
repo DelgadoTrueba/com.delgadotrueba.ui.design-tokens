@@ -3,7 +3,7 @@
   "platforms": {
     "css": {
       "transformGroup": "css",
-      "buildPath": "build/css/",
+      "buildPath": "dist/css/",
       "files": [
         {
           "destination": "_variables.css",
@@ -13,7 +13,7 @@
     },
     "ios": {
       "transformGroup": "ios",
-      "buildPath": "ios/Classes/Generated/",
+      "buildPath": "dist/ios/Classes/Generated/",
       "prefix": "StyleDictionary",
       "files": [
         {
@@ -113,7 +113,7 @@
 
     "android": {
       "transformGroup": "android",
-      "buildPath": "android/styledictionary/src/main/res/values/",
+      "buildPath": "dist/android/styledictionary/src/main/res/values/",
       "files": [
         {
           "destination": "style_dictionary_colors.xml",
@@ -140,7 +140,7 @@
 
     "android-asset": {
       "transformGroup": "android",
-      "buildPath": "android/styledictionary/src/main/",
+      "buildPath": "dist/android/styledictionary/src/main/",
       "files": [
         {
           "destination": "assets/data/properties.json",
