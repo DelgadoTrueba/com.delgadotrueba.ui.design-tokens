@@ -1,6 +1,16 @@
 {
-  "source": ["tokens/**/*.json"],
+  "source": ["src/tokens/**/*.json"],
   "platforms": {
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "build/css/",
+      "files": [
+        {
+          "destination": "_variables.css",
+          "format": "css/variables"
+        }
+      ]
+    },
     "ios": {
       "transformGroup": "ios",
       "buildPath": "ios/Classes/Generated/",
