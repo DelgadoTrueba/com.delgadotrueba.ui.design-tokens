@@ -1,9 +1,10 @@
 {
-  "name": "style-dictionary-example-complete",
-  "version": "1.0.0",
+  "name": "@delgadotrueba/design-tokens",
+  "version": "0.0.1",
   "description": "",
-  "main": "build.js",
   "type": "module",
+  "module": "./src/index.js",
+  "typings": "./src/index.d.ts",
   "scripts": {
     "build": "style-dictionary build",
     "clean": "rm -rf build",
@@ -12,6 +13,6 @@
   "author": "",
   "license": "Apache-2.0",
   "devDependencies": {
-    "style-dictionary": "^4.0.0-prerelease.30"
+    "style-dictionary": "4.1.1"
   }
 }
