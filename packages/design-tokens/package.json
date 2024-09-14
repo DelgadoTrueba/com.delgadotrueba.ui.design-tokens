@@ -1,13 +1,17 @@
 {
-  "name": "@delgadotrueba/design-tokens",
-  "version": "0.0.1",
-  "dependencies": {
-    "tslib": "^2.3.0"
-  },
+  "name": "style-dictionary-example-complete",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build.js",
   "type": "module",
-  "module": "./src/index.js",
-  "typings": "./src/index.d.ts",
+  "scripts": {
+    "build": "style-dictionary build",
+    "clean": "rm -rf build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Apache-2.0",
   "devDependencies": {
-    "style-dictionary": "4.1.1"
+    "style-dictionary": "^4.0.0-prerelease.30"
   }
 }
