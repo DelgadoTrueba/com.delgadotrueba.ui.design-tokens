@@ -1,18 +1,6 @@
 import StyleDictionary from 'style-dictionary';
-import Color from 'tinycolor2';
 
-import {isColorAlphaComposite} from "../../../utils/color/index.js"
-
-/**
- * @param {{ color: string, alpha: number }} value
- * @returns tinycolor2 instance
- */
-export const transformColorComposite = (value) => {
-    const output = Color(value.color);
-    if (!output.isValid()) throw new TypeError('Color value is not valid');
-    output.setAlpha(value.alpha);
-    return output;
-}
+import Color, { isColorAlphaComposite, transformColorComposite } from "../../../utils/color/index.js"
 
 /**
  * Handle composite shadow tokens

@@ -7,14 +7,15 @@ const cssTransformGroup = [
   'size/rem',             // Converts size values to rem units
   'color/css',            // Converts color values to CSS-compatible formats
   // Your custom transformer
-  'modular-scale/px',    
-  'shadow/css'
+  'modular-scale/px',
+  'shadow/css',
+  // 'color/alpha',
 ];
 
 export default {
-  include: ['src/tokens/**/*.json5'],
+  include: ['src/tokens/core/**/*.json5'],
   source: [
-    'src/tokens/**/*.json5',
+    'src/tokens/semantic/**/*.json5'
   ],
   platforms: {
     cssLightData: {
@@ -24,7 +25,9 @@ export default {
       files: [
         {
           destination: OUTPUT_BASE_FILENAME + '.light.css',
-          format: "css/variables"
+          format: "css/variables",
+          filter: (token) =>
+            token.path[0] !== 'core'
         },
       ],
     }

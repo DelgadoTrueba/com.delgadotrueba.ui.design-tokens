@@ -19,6 +19,10 @@ import "./transformers/modular-scale/rem/index.js"
 
 import "./transformers/shadow/css/index.js"
 
+// import "./transformers/color/css/index.js" //default
+// import "./transformers/color/alpha/index.js"
+// import "./transformers/color/alpha-hex/index.js"
+
 
 
 
