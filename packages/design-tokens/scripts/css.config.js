@@ -10,9 +10,9 @@ const cssTransformGroup = [
 ];
 
 export default {
-  include: ['src/tokens/**/*.json'],
+  include: ['src/tokens/**/*.json5'],
   source: [
-    'src/tokens/**/*.json',
+    'src/tokens/**/*.json5',
   ],
   platforms: {
     cssLightData: {

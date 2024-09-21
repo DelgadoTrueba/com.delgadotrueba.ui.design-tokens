@@ -13,6 +13,8 @@
                 "value": "0px",
                 "type": "dimension"
             },
+            // TODO:
+            // - improve dimension
             "125": {
                 "value": {
                     "base": "{core.dimension.base.value}",
