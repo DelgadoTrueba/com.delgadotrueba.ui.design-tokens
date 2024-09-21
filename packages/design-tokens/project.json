@@ -13,6 +13,16 @@
   },
   "tags": [],
   "targets": {
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "echo 'No operation performed'"
+          }
+        ]
+      }
+    },
     "nx-release-publish": {
       "options": {
         "packageRoot": "dist/{projectRoot}"
