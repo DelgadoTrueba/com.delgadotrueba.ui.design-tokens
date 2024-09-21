@@ -3,7 +3,9 @@ const cssTransformGroup = [
   'name/cti/kebab',       // Converts names to kebab-case
   'size/rem',             // Converts size values to rem units
   'color/css',            // Converts color values to CSS-compatible formats
-  'modular-scale/px',    // Your custom transformer
+  // Your custom transformer
+  'modular-scale/px',    
+  'shadow/css'
 ];
 
 export default {
