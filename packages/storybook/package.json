@@ -4,6 +4,9 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
+  "devDependencies": {
+    "@storybook/cli": "6.5.13"
+  },
   "module": "./src/index.js",
   "typings": "./src/index.d.ts"
 }
