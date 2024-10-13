@@ -23,10 +23,10 @@ export default (Story) => {
     function setTheme(theme) {
       const body = document.body;
       if (theme === LIGHT) {
-        body.setAttribute('data-mode', 'light');
+        body.setAttribute('data-theme', 'light');
       }
       if (theme === DARK) {
-        body.setAttribute('data-mode', 'dark');
+        body.setAttribute('data-theme', 'dark');
       }
     }
     setTheme(global?.backgrounds?.value || LIGHT);

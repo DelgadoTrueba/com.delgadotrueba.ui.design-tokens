@@ -23,7 +23,7 @@ StyleDictionary.registerAction({
   ${printVariables(lightOnly)}
   }
   
-  [data-mode="dark"] {
+  [data-theme="dark"] {
   ${printVariables(darkOnly)}
   }
   
@@ -32,7 +32,7 @@ StyleDictionary.registerAction({
   ${printVariables(darkOnly, '    ')}
     }
 
-    [data-mode="light"] {
+    [data-theme="light"] {
   ${printVariables(lightOnly, '    ')}
     }
 }`;
