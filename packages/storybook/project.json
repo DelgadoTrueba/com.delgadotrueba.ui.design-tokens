@@ -13,18 +13,26 @@
   },
   "tags": [],
   "targets": {
-    "build": {
-      "executor": "@nx/js:tsc",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+    "start": {
+      "executor": "nx:run-commands",
       "options": {
-        "outputPath": "dist/{projectRoot}",
-        "main": "{projectRoot}/src/index.ts",
-        "tsConfig": "{projectRoot}/tsconfig.json",
-        "assets": [
-          "{projectRoot}/*.md"
-        ]
+        "commands": [
+          {
+            "command": "start-storybook -p 6006 --config-dir {projectRoot}/.storybook"
+          }
+        ],
+        "parallel": false
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "build-storybook  --output-dir dist/{projectRoot} --config-dir {projectRoot}/.storybook"
+          }
+        ],
+        "parallel": false
       }
     },
     "lint": {
