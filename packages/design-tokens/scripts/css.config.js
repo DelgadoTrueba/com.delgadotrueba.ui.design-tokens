@@ -18,6 +18,24 @@ export default {
     'src/tokens/semantic/**/*.json5'
   ],
   platforms: {
+    commonData: {
+      transforms: [...cssTransformGroup],
+      prefix: PREFIX,
+      buildPath: OUTPUT_PATH + 'css/',
+      files: [
+        { format: "css/variables", ext: '.css' },
+        { format: 'json/flat', ext: '.json' }
+      ].map(({ format, ext }) => {
+        return {
+          format,
+          destination: OUTPUT_BASE_FILENAME + '.common' + ext,
+          filter: (token) => {
+            return token.path[0] !== 'core'
+              && (token.original.value?.light == null || token.original.value?.dark == null)
+          }
+        }
+      })
+    },
     cssLightData: {
       transforms: [
         'theme-light',
@@ -32,7 +50,7 @@ export default {
           format,
           destination: OUTPUT_BASE_FILENAME + '.light' + ext,
           filter: (token) =>
-            token.path[0] !== 'core'
+            token.path[0] !== 'core' && token.original.value?.light != null,
         }
       })
     },
@@ -48,7 +66,7 @@ export default {
           format,
           destination: OUTPUT_BASE_FILENAME + '.dark' + ext,
           filter: (token) =>
-            token.path[0] !== 'core'
+            token.path[0] !== 'core' && token.original.value?.dark != null,
         }
       }),
       // actions: ['bundle_css'],
