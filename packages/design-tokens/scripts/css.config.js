@@ -69,7 +69,7 @@ export default {
             token.path[0] !== 'core' && token.original.value?.dark != null,
         }
       }),
-      // actions: ['bundle_css'],
+      actions: ['bundle_css'],
     },
   },
 };
