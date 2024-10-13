@@ -6,7 +6,7 @@ function setDefaultEnvValue(key, value) {
 
 setDefaultEnvValue(
     'CONFIG',
-    'default,css'
+    'default,css,tailwindcss-preset'
 );
 setDefaultEnvValue('PREFIX', 'dt');
 setDefaultEnvValue('OUTPUT_PATH', 'dist/');
@@ -31,6 +31,12 @@ import "./transformers/cubic-bezier/css/index.js"
 
 import "./transformers/theme/light/index.js"
 import "./transformers/theme/dark/index.js"
+
+import "./transformers/name/cti/kebab2/index.js"
+
+import "./tailwindcss/preset/index.js"
+import "./tailwindcss/preset-header/index.js"
+
 
 // Actions
 import "./actions/bundle/css/index.js"
