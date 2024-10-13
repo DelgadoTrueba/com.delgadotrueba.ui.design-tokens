@@ -25,6 +25,7 @@
     "baseUrl": ".",
     "rootDir": ".",
     "paths": {
+      "@delgadotrueba/design-tokens": ["./packages/design-tokens/src/index.ts"],
       "@delgadotrueba/example": ["./packages/example/src/index.ts"]
     }
   },

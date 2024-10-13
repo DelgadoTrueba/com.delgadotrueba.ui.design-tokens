@@ -1,0 +1,23 @@
+{
+  "name": "@delgadotrueba/design-tokens",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "module": "./src/index.js",
+  "typings": "./src/index.d.ts",
+  "scripts": {
+    "build": "OUTPUT_BASE_FILENAME=dt-theme OUTPUT_PATH=dist/ node scripts/build.js",
+    "clean": "rm -rf build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "style-dictionary": "3.1.1",
+    "tinycolor2": "1.4.2"
+  },
+  "dependencies": {
+    "@divriots/style-dictionary-to-figma": "0.4.0",
+    "deep-get-set": "1.1.2"
+  }
+}
