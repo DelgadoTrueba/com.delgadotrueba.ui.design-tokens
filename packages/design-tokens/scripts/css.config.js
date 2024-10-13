@@ -20,7 +20,7 @@ export default {
   platforms: {
     cssLightData: {
       transforms: [
-        // 'mode-light', 
+        'theme-light',
         ...cssTransformGroup],
       prefix: PREFIX,
       buildPath: OUTPUT_PATH + 'css/',
@@ -37,7 +37,7 @@ export default {
       })
     },
     // cssDarkOnlyData: {
-    //   transforms: ['mode-dark', ...cssTransformGroup,],
+    //   transforms: ['theme-dark', ...cssTransformGroup,],
     //   prefix: PREFIX,
     //   buildPath: OUTPUT_PATH + 'css/',
     //   files: ['css/variables', 'json/flat'].map(format => {
