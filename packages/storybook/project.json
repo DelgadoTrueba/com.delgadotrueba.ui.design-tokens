@@ -15,12 +15,32 @@
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/packages/storybook",
-        "main": "packages/storybook/src/index.ts",
-        "tsConfig": "packages/storybook/tsconfig.lib.json",
-        "assets": ["packages/storybook/*.md"]
+        "outputPath": "dist/{projectRoot}",
+        "main": "{projectRoot}/src/index.ts",
+        "tsConfig": "{projectRoot}/tsconfig.json",
+        "assets": [
+          "{projectRoot}/*.md"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": [
+        "{options.outputFile}"
+      ]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
+      "options": {
+        "jestConfig": "{projectRoot}/jest.config.ts",
+        "codeCoverage": true
       }
     },
     "nx-release-publish": {
