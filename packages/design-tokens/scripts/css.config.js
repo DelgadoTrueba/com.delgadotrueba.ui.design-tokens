@@ -10,6 +10,7 @@ const cssTransformGroup = [
   'modular-scale/px',
   'shadow/css',
   'color/alpha',
+  'text-style/css'
 ];
 
 export default {

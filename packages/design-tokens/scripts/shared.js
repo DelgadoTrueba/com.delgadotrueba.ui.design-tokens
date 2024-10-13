@@ -23,6 +23,8 @@ import "./transformers/color/css/index.js" //default
 import "./transformers/color/alpha/index.js"
 import "./transformers/color/alpha-hex/index.js"
 
+import "./transformers/text-style/css/index.js"
+
 import "./transformers/theme/light/index.js"
 import "./transformers/theme/dark/index.js"
 
