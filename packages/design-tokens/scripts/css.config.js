@@ -36,19 +36,22 @@ export default {
         }
       })
     },
-    // cssDarkOnlyData: {
-    //   transforms: ['theme-dark', ...cssTransformGroup,],
-    //   prefix: PREFIX,
-    //   buildPath: OUTPUT_PATH + 'css/',
-    //   files: ['css/variables', 'json/flat'].map(format => {
-    //     return {
-    //       format,
-    //       destination: OUTPUT_BASE_FILENAME + '.dark.css',
-    //       filter: (token) =>
-    //         token.path[0] !== 'core' && token.original.value?.dark != null,
-    //     }
-    //   }),
-    //   actions: ['bundle_css'],
-    // },
+    cssDarkOnlyData: {
+      transforms: ['theme-dark', ...cssTransformGroup,],
+      prefix: PREFIX,
+      buildPath: OUTPUT_PATH + 'css/',
+      files: [
+        { format: "css/variables", ext: '.css' },
+        { format: 'json/flat', ext: '.json' }
+      ].map(({ format, ext }) => {
+        return {
+          format,
+          destination: OUTPUT_BASE_FILENAME + '.dark' + ext,
+          filter: (token) =>
+            token.path[0] !== 'core'
+        }
+      }),
+      // actions: ['bundle_css'],
+    },
   },
 };
