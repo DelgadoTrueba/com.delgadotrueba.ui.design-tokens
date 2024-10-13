@@ -9,7 +9,7 @@ const cssTransformGroup = [
   // Your custom transformer
   'modular-scale/px',
   'shadow/css',
-  // 'color/alpha',
+  'color/alpha',
 ];
 
 export default {
@@ -19,17 +19,36 @@ export default {
   ],
   platforms: {
     cssLightData: {
-      transforms: [...cssTransformGroup],
+      transforms: [
+        // 'mode-light', 
+        ...cssTransformGroup],
       prefix: PREFIX,
       buildPath: OUTPUT_PATH + 'css/',
       files: [
-        {
-          destination: OUTPUT_BASE_FILENAME + '.light.css',
-          format: "css/variables",
+        { format: "css/variables", ext: '.css' },
+        { format: 'json/flat', ext: '.json' }
+      ].map(({ format, ext }) => {
+        return {
+          format,
+          destination: OUTPUT_BASE_FILENAME + '.light' + ext,
           filter: (token) =>
             token.path[0] !== 'core'
-        },
-      ],
-    }
+        }
+      })
+    },
+    // cssDarkOnlyData: {
+    //   transforms: ['mode-dark', ...cssTransformGroup,],
+    //   prefix: PREFIX,
+    //   buildPath: OUTPUT_PATH + 'css/',
+    //   files: ['css/variables', 'json/flat'].map(format => {
+    //     return {
+    //       format,
+    //       destination: OUTPUT_BASE_FILENAME + '.dark.css',
+    //       filter: (token) =>
+    //         token.path[0] !== 'core' && token.original.value?.dark != null,
+    //     }
+    //   }),
+    //   actions: ['bundle_css'],
+    // },
   },
 };
