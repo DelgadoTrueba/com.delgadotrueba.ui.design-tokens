@@ -17,6 +17,7 @@
     "tinycolor2": "1.4.2"
   },
   "dependencies": {
+    "@divriots/style-dictionary-to-figma": "0.4.0",
     "deep-get-set": "1.1.2"
   }
 }
