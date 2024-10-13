@@ -1,3 +1,5 @@
+import withTheme, { backgrounds } from './decorators/withTheme';
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -6,4 +8,7 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  backgrounds,
 }
+
+export const decorators = [withTheme]

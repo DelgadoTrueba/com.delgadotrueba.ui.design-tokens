@@ -38,4 +38,5 @@ module.exports = {
       ]
     ]
   }),
+  staticDirs: ['../../design-tokens/dist/css'],
 }
