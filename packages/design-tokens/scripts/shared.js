@@ -25,6 +25,10 @@ import "./transformers/color/alpha-hex/index.js"
 
 import "./transformers/text-style/css/index.js"
 
+import "./transformers/size/rem/index.js"
+
+import "./transformers/cubic-bezier/css/index.js"
+
 import "./transformers/theme/light/index.js"
 import "./transformers/theme/dark/index.js"
 
