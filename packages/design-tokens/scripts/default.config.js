@@ -6,12 +6,12 @@ const cssTransformGroup = [
   // Your custom transformer
   'modular-scale/px',
   'shadow/css',
+  'color/css',
   // 'color/alpha',
-  // 'color/css',
 ];
 
 export default {
-  "source": ["src/tokens/**/*.json5"],
+  source: ['src/tokens/core/**/*.json5'],
   "platforms": {
     "css": {
       transforms: [...cssTransformGroup],
@@ -19,7 +19,7 @@ export default {
       "buildPath": "dist/css/",
       "files": [
         {
-          "destination": "_variables.css",
+          "destination": "core.css",
           "format": "css/variables"
         }
       ]
