@@ -1,15 +1,150 @@
 import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
 import colors from '../../../design-tokens/dist/css/dt-theme.light.json';
 import {
-  groupByPrefix,
-  createGroupedJSON,
-  renderContent,
+  filterObjectByString,
   groupColorsByPrefix,
 } from './color.utils.jsx';
 
 <Meta title="Example/Colors" />
 
 <ColorPalette>
+
+
+<h1>color-primary</h1>
+<div>
+  {Object.entries(
+    groupColorsByPrefix(
+      filterObjectByString(colors, 'color-primary')
+      ,3
+      )
+    ).map(([group, colors]) => (
+    <ColorItem
+      key={group}
+      title={group.replace('dt-color-', '').replace(/-/g, ' ').toUpperCase()}
+      subtitle="Coral" // Puedes cambiar esto según sea necesario
+      colors={colors}
+    />
+  ))}
+</div>
+
+<h1>color-background</h1>
+<div>
+  {Object.entries(
+    groupColorsByPrefix(
+      filterObjectByString(colors, 'color-background')
+      ,4
+      )
+    ).map(([group, colors]) => (
+    <ColorItem
+      key={group}
+      title={group.replace('dt-color-', '').replace(/-/g, ' ').toUpperCase()}
+      subtitle="Coral" // Puedes cambiar esto según sea necesario
+      colors={colors}
+    />
+  ))}
+</div>
+
+
+<h1>color-ui</h1>
+<div>
+  {Object.entries(
+    groupColorsByPrefix(
+      filterObjectByString(colors, 'color-ui-border')
+      ,4
+      )
+    ).map(([group, colors]) => (
+    <ColorItem
+      key={group}
+      title={group.replace('dt-color-', '').replace(/-/g, ' ').toUpperCase()}
+      subtitle="Coral" // Puedes cambiar esto según sea necesario
+      colors={colors}
+    />
+  ))}
+</div>
+<div>
+  {Object.entries(
+    groupColorsByPrefix(
+      filterObjectByString(colors, 'color-ui-state')
+      ,4
+      )
+    ).map(([group, colors]) => (
+    <ColorItem
+      key={group}
+      title={group.replace('dt-color-', '').replace(/-/g, ' ').toUpperCase()}
+      subtitle="Coral" // Puedes cambiar esto según sea necesario
+      colors={colors}
+    />
+  ))}
+</div>
+<div>
+  {Object.entries(
+    groupColorsByPrefix(
+      filterObjectByString(colors, 'color-ui')
+      ,2
+      )
+    ).map(([group, colors]) => (
+    <ColorItem
+      key={group}
+      title={group.replace('dt-color-', '').replace(/-/g, ' ').toUpperCase()}
+      subtitle="Coral" // Puedes cambiar esto según sea necesario
+      colors={colors}
+    />
+  ))}
+</div>
+
+
+
+<h1>color-functional</h1>
+<div>
+  {Object.entries(
+    groupColorsByPrefix(
+      filterObjectByString(colors, 'color-functional')
+      ,4
+      )
+    ).map(([group, colors]) => (
+    <ColorItem
+      key={group}
+      title={group.replace('dt-color-', '').replace(/-/g, ' ').toUpperCase()}
+      subtitle="Coral" // Puedes cambiar esto según sea necesario
+      colors={colors}
+    />
+  ))}
+</div>
+
+<h1>color-additional</h1>
+<div>
+  {Object.entries(
+    groupColorsByPrefix(
+      filterObjectByString(colors, 'color-additional')
+      ,3
+      )
+    ).map(([group, colors]) => (
+    <ColorItem
+      key={group}
+      title={group.replace('dt-color-', '').replace(/-/g, ' ').toUpperCase()}
+      subtitle="Coral" // Puedes cambiar esto según sea necesario
+      colors={colors}
+    />
+  ))}
+</div>
+
+<h1>color-text-icon</h1>
+<div>
+  {Object.entries(
+    groupColorsByPrefix(
+      filterObjectByString(colors, 'color-text-icon')
+      ,5
+      )
+    ).map(([group, colors]) => (
+    <ColorItem
+      key={group}
+      title={group.replace('dt-color-', '').replace(/-/g, ' ').toUpperCase()}
+      subtitle="Coral" // Puedes cambiar esto según sea necesario
+      colors={colors}
+    />
+  ))}
+</div>
+
 
 <div>
   {Object.entries(groupColorsByPrefix(colors)).map(([group, colors]) => (
@@ -21,5 +156,7 @@ import {
     />
   ))}
 </div>
+
+
 
 </ColorPalette>
