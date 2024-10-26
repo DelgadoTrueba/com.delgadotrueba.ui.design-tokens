@@ -1,0 +1,25 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
+import colors from '../../../design-tokens/dist/css/dt-theme.light.json';
+import {
+  groupByPrefix,
+  createGroupedJSON,
+  renderContent,
+  groupColorsByPrefix,
+} from './color.utils.jsx';
+
+<Meta title="Example/Colors" />
+
+<ColorPalette>
+
+<div>
+  {Object.entries(groupColorsByPrefix(colors)).map(([group, colors]) => (
+    <ColorItem
+      key={group}
+      title={group.replace('dt-color-', '').replace(/-/g, ' ').toUpperCase()}
+      subtitle="Coral" // Puedes cambiar esto según sea necesario
+      colors={colors}
+    />
+  ))}
+</div>
+
+</ColorPalette>
