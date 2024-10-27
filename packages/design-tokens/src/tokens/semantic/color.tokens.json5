@@ -1068,29 +1068,7 @@
               },
             },
           },
-        },
-        "on-dark-background": {
-          value: "{core.color.blue.200}",
-          type: "color",
-          extensions: {
-            telekom: {
-              sketch: {
-                uuid: "CA8F92E9-EBFE-4A72-B076-29CE6D1BE8C7",
-              },
-            },
-          },
-        },
-        "on-light-background": {
-          value: "{core.color.blue.500}",
-          type: "color",
-          extensions: {
-            telekom: {
-              sketch: {
-                uuid: "5d91067e-2a28-44b9-86f5-f18af20b0660",
-              },
-            },
-          },
-        },
+        }
       },
       informational: {
         standard: {
