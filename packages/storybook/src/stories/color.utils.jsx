@@ -3,9 +3,10 @@ export const filterObjectByString = (colors, searchString) => {
     Object.keys(colors).forEach(key => {
         if (key.includes(searchString)) {
             filteredObj[key] = colors[key];
-            // delete colors[key]; // Efecto secundario: elimina la propiedad del objeto original
+            delete colors[key]; // Efecto secundario: elimina la propiedad del objeto original
         }
     });
+    console.log({colors})
     return filteredObj;
 }
 
@@ -41,3 +42,7 @@ export  const transformarColores = (colores) => {
     }
     return coloresTransformados;
   };
+
+  import colorsLight from '../../../design-tokens/dist/css/dt-theme.light.json';
+
+  export const colors =  colorsLight

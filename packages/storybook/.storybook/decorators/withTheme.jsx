@@ -1,7 +1,7 @@
 import { useEffect, useGlobals } from '@storybook/addons';
 
-const LIGHT = '#FFFFFFCC';
-const DARK = '#FFFFFFFF';
+export const LIGHT = '#FFFFFFCC';
+export const DARK = '#FFFFFFFF';
 
 export const backgrounds = {
   values: [
@@ -17,9 +17,7 @@ export const backgrounds = {
 }
 
 
-function setTheme(theme) {
-  console.log({theme})
-  console.log(theme === LIGHT)
+export function setTheme(theme) {
   const body = document.body;
   if (theme === LIGHT) {
     body.setAttribute('data-theme', 'light');
@@ -39,16 +37,21 @@ export default (Story) => {
   return <div id="theme-provider" >{Story()}</div>;
 };
 
-export const themeEffectMdx = () => {
-  const url = new URL(window.location.href);
+import {DocsContainer} from '@storybook/addon-docs'
+
+export const ThemeMdx = (props) => {
+  setTimeout(() => {
+    const url = new URL(window.location.href);
     const globals = url.searchParams.get('globals');
 
-    console.log({globals})
-    if (globals === `backgrounds.value:!hex(${LIGHT})`) {
+    if (globals === 'backgrounds.value:!hex(FFFFFFCC)') {
       setTheme(LIGHT);
-    } else  if (globals === `backgrounds.value:!hex(${DARK})`) {
+    } else if (globals === 'backgrounds.value:!hex(FFFFFFFF)') {
       setTheme(DARK);
     } else {
       setTheme(LIGHT);
     }
+   }, 100)
+
+    return  <DocsContainer {...props} />
 }
