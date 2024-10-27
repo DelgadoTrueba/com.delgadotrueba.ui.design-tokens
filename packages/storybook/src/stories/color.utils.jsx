@@ -3,7 +3,7 @@ export const filterObjectByString = (colors, searchString) => {
     Object.keys(colors).forEach(key => {
         if (key.includes(searchString)) {
             filteredObj[key] = colors[key];
-            delete colors[key]; // Efecto secundario: elimina la propiedad del objeto original
+            // delete colors[key]; // Efecto secundario: elimina la propiedad del objeto original
         }
     });
     return filteredObj;
@@ -25,6 +25,19 @@ export const groupColorsByPrefix = (colors, groupDeep = 4) => {
       }
       grouped[prefix][key] = value;
     });
-
     return grouped;
+  };
+
+export  const transformarColores = (colores) => {
+    const element = document.querySelector('#theme-provider'); // Reemplaza 'selector' con tu selector específico
+
+    // Obtiene el estilo computado del elemento
+    const style = getComputedStyle(element);
+
+    let coloresTransformados = {};
+
+    for (const clave in colores) {
+      coloresTransformados[style.getPropertyValue(`--${clave}`)] = `var(--${clave})`;
+    }
+    return coloresTransformados;
   };

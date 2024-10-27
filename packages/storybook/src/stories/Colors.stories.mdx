@@ -1,17 +1,23 @@
 import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
+import { useGlobals } from '@storybook/addons';
+const LIGHT = '#FFFFFFCC';
+const DARK = '#FFFFFFFF';
+
+<!-- import colorsLight from '../../../design-tokens/dist/css/dt-theme.light.json'; -->
 import colors from '../../../design-tokens/dist/css/dt-theme.light.json';
+
 import {
+  transformarColores,
   filterObjectByString,
   groupColorsByPrefix,
 } from './color.utils.jsx';
 
+
 <Meta title="Example/Colors" />
 
-<ColorPalette>
-
-
 <h1>color-primary</h1>
-<div>
+
+<ColorPalette>
   {Object.entries(
     groupColorsByPrefix(
       filterObjectByString(colors, 'color-primary')
@@ -22,10 +28,10 @@ import {
       key={group}
       title={group.replace('dt-color-', '').replace(/-/g, ' ').toUpperCase()}
       subtitle="Coral" // Puedes cambiar esto según sea necesario
-      colors={colors}
+      colors={transformarColores(colors)}
     />
   ))}
-</div>
+</ColorPalette>
 
 <h1>color-background</h1>
 <div>
@@ -39,7 +45,7 @@ import {
       key={group}
       title={group.replace('dt-color-', '').replace(/-/g, ' ').toUpperCase()}
       subtitle="Coral" // Puedes cambiar esto según sea necesario
-      colors={colors}
+      colors={transformarColores(colors)}
     />
   ))}
 </div>
@@ -157,6 +163,3 @@ import {
   ))}
 </div>
 
-
-
-</ColorPalette>
