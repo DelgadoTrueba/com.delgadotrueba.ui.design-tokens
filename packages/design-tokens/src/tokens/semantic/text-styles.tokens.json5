@@ -1,10 +1,44 @@
 {
   "text-style": {
-    badge: {
+    "title-1": {
       value: {
         "font-family": "{private.typography.font-family.sans}",
-        "font-size": "{private.typography.font-size.badge}",
-        "font-weight": "{private.typography.font-weight.regular}",
+        "font-size": "{private.typography.font-size.title-1}",
+        "font-weight": "{private.typography.font-weight.extra-bold}",
+        "line-spacing": "{private.typography.line-spacing.extra-tight}",
+        "letter-spacing": "{private.typography.letter-spacing.standard}",
+      },
+      type: "textStyle",
+      extensions: {
+        telekom: {
+          sketch: {
+            uuid: "95D8FC15-5804-4638-8590-80D8FD5F1B24",
+          },
+        },
+      },
+    },
+    "title-2": {
+      value: {
+        "font-family": "{private.typography.font-family.sans}",
+        "font-size": "{private.typography.font-size.title-2}",
+        "font-weight": "{private.typography.font-weight.extra-bold}",
+        "line-spacing": "{private.typography.line-spacing.extra-tight}",
+        "letter-spacing": "{private.typography.letter-spacing.standard}",
+      },
+      type: "textStyle",
+      extensions: {
+        telekom: {
+          sketch: {
+            uuid: "FE1ECB0C-6279-4900-B93B-1E06A11E25D9",
+          },
+        },
+      },
+    },
+    "heading-1": {
+      value: {
+        "font-family": "{private.typography.font-family.sans}",
+        "font-size": "{private.typography.font-size.title-3}",
+        "font-weight": "{private.typography.font-weight.extra-bold}",
         "line-spacing": "{core.typography.line-spacing.xs}",
         "letter-spacing": "{private.typography.letter-spacing.standard}",
       },
@@ -12,16 +46,50 @@
       extensions: {
         telekom: {
           sketch: {
-            uuid: "DD449C5D-7DA4-4E32-8187-2448031BD53F",
+            uuid: "748B5B13-3227-4C2F-89BC-A2E273E6727E",
           },
         },
       },
     },
-    small: {
+    "heading-2": {
       value: {
         "font-family": "{private.typography.font-family.sans}",
-        "font-size": "{private.typography.font-size.small}",
-        "font-weight": "{private.typography.font-weight.medium}",
+        "font-size": "{private.typography.font-size.headline-1}",
+        "font-weight": "{private.typography.font-weight.extra-bold}",
+        "line-spacing": "{private.typography.line-spacing.extra-tight}",
+        "letter-spacing": "{private.typography.letter-spacing.standard}",
+      },
+      type: "textStyle",
+      extensions: {
+        telekom: {
+          sketch: {
+            uuid: "F40BF846-4438-4B29-BADD-1A536C109E73",
+          },
+        },
+      },
+    },
+    "heading-3": {
+      value: {
+        "font-family": "{private.typography.font-family.sans}",
+        "font-size": "{private.typography.font-size.headline-2}",
+        "font-weight": "{private.typography.font-weight.extra-bold}",
+        "line-spacing": "{private.typography.line-spacing.tight}",
+        "letter-spacing": "{private.typography.letter-spacing.standard}",
+      },
+      type: "textStyle",
+      extensions: {
+        telekom: {
+          sketch: {
+            uuid: "09380335-83C1-4B0B-BBAB-EE2194F83C67",
+          },
+        },
+      },
+    },
+    "heading-4": {
+      value: {
+        "font-family": "{private.typography.font-family.sans}",
+        "font-size": "{private.typography.font-size.headline-3}",
+        "font-weight": "{private.typography.font-weight.extra-bold}",
         "line-spacing": "{core.typography.line-spacing.md}",
         "letter-spacing": "{private.typography.letter-spacing.standard}",
       },
@@ -29,33 +97,16 @@
       extensions: {
         telekom: {
           sketch: {
-            uuid: "63B6E103-0BB8-419B-9A70-67A5D57213DF",
+            uuid: "DCA48C57-DA5C-4B2A-825F-82C7E28955FD",
           },
         },
       },
     },
-    "small-bold": {
+    "heading-5": {
       value: {
         "font-family": "{private.typography.font-family.sans}",
-        "font-size": "{private.typography.font-size.small}",
-        "font-weight": "{private.typography.font-weight.bold}",
-        "line-spacing": "{core.typography.line-spacing.md}",
-        "letter-spacing": "{private.typography.letter-spacing.standard}",
-      },
-      type: "textStyle",
-      extensions: {
-        telekom: {
-          sketch: {
-            uuid: "23BEBB18-0F38-4AF1-AF03-E1A81C6AB5F6",
-          },
-        },
-      },
-    },
-    caption: {
-      value: {
-        "font-family": "{private.typography.font-family.sans}",
-        "font-size": "{private.typography.font-size.caption}",
-        "font-weight": "{private.typography.font-weight.regular}",
+        "font-size": "{private.typography.font-size.callout}",
+        "font-weight": "{private.typography.font-weight.extra-bold}",
         "line-spacing": "{private.typography.line-spacing.standard}",
         "letter-spacing": "{private.typography.letter-spacing.standard}",
       },
@@ -63,46 +114,12 @@
       extensions: {
         telekom: {
           sketch: {
-            uuid: "C9B0389E-50B8-443A-B57A-6437226F2E54",
+            uuid: "29E0191D-BA8D-41CE-B777-84F16EBE07CC",
           },
         },
       },
     },
-    "caption-bold": {
-      value: {
-        "font-family": "{private.typography.font-family.sans}",
-        "font-size": "{private.typography.font-size.caption}",
-        "font-weight": "{private.typography.font-weight.bold}",
-        "line-spacing": "{private.typography.line-spacing.standard}",
-        "letter-spacing": "{private.typography.letter-spacing.standard}",
-      },
-      type: "textStyle",
-      extensions: {
-        telekom: {
-          sketch: {
-            uuid: "74715D6A-299E-4B2B-8017-313B170F3F26",
-          },
-        },
-      },
-    },
-    body: {
-      value: {
-        "font-family": "{private.typography.font-family.sans}",
-        "font-size": "{private.typography.font-size.body}",
-        "font-weight": "{private.typography.font-weight.regular}",
-        "line-spacing": "{private.typography.line-spacing.standard}",
-        "letter-spacing": "{private.typography.letter-spacing.standard}",
-      },
-      type: "textStyle",
-      extensions: {
-        telekom: {
-          sketch: {
-            uuid: "92541698-8672-4C85-AAB0-86351E764C2B",
-          },
-        },
-      },
-    },
-    "body-bold": {
+    "heading-6": {
       value: {
         "font-family": "{private.typography.font-family.sans}",
         "font-size": "{private.typography.font-size.body}",
@@ -114,7 +131,24 @@
       extensions: {
         telekom: {
           sketch: {
-            uuid: "49D6E98C-44BF-4A65-926F-CCFE5DE97316",
+            uuid: "96B71BB7-4924-450B-A090-42C83C066BB1",
+          },
+        },
+      },
+    },
+    "lead-text": {
+      value: {
+        "font-family": "{private.typography.font-family.sans}",
+        "font-size": "{private.typography.font-size.callout}",
+        "font-weight": "{private.typography.font-weight.regular}",
+        "line-spacing": "{private.typography.line-spacing.standard}",
+        "letter-spacing": "{private.typography.letter-spacing.standard}",
+      },
+      type: "textStyle",
+      extensions: {
+        telekom: {
+          sketch: {
+            uuid: "D6365CF0-2671-4374-BD8E-6E1C2D2D29BF",
           },
         },
       },
@@ -153,10 +187,10 @@
         },
       },
     },
-    "lead-text": {
+    body: {
       value: {
         "font-family": "{private.typography.font-family.sans}",
-        "font-size": "{private.typography.font-size.callout}",
+        "font-size": "{private.typography.font-size.body}",
         "font-weight": "{private.typography.font-weight.regular}",
         "line-spacing": "{private.typography.line-spacing.standard}",
         "letter-spacing": "{private.typography.letter-spacing.standard}",
@@ -165,12 +199,12 @@
       extensions: {
         telekom: {
           sketch: {
-            uuid: "D6365CF0-2671-4374-BD8E-6E1C2D2D29BF",
+            uuid: "92541698-8672-4C85-AAB0-86351E764C2B",
           },
         },
       },
     },
-    "heading-6": {
+    "body-bold": {
       value: {
         "font-family": "{private.typography.font-family.sans}",
         "font-size": "{private.typography.font-size.body}",
@@ -182,16 +216,16 @@
       extensions: {
         telekom: {
           sketch: {
-            uuid: "96B71BB7-4924-450B-A090-42C83C066BB1",
+            uuid: "49D6E98C-44BF-4A65-926F-CCFE5DE97316",
           },
         },
       },
     },
-    "heading-5": {
+    caption: {
       value: {
         "font-family": "{private.typography.font-family.sans}",
-        "font-size": "{private.typography.font-size.callout}",
-        "font-weight": "{private.typography.font-weight.extra-bold}",
+        "font-size": "{private.typography.font-size.caption}",
+        "font-weight": "{private.typography.font-weight.regular}",
         "line-spacing": "{private.typography.line-spacing.standard}",
         "letter-spacing": "{private.typography.letter-spacing.standard}",
       },
@@ -199,16 +233,33 @@
       extensions: {
         telekom: {
           sketch: {
-            uuid: "29E0191D-BA8D-41CE-B777-84F16EBE07CC",
+            uuid: "C9B0389E-50B8-443A-B57A-6437226F2E54",
           },
         },
       },
     },
-    "heading-4": {
+    "caption-bold": {
       value: {
         "font-family": "{private.typography.font-family.sans}",
-        "font-size": "{private.typography.font-size.headline-3}",
-        "font-weight": "{private.typography.font-weight.extra-bold}",
+        "font-size": "{private.typography.font-size.caption}",
+        "font-weight": "{private.typography.font-weight.bold}",
+        "line-spacing": "{private.typography.line-spacing.standard}",
+        "letter-spacing": "{private.typography.letter-spacing.standard}",
+      },
+      type: "textStyle",
+      extensions: {
+        telekom: {
+          sketch: {
+            uuid: "74715D6A-299E-4B2B-8017-313B170F3F26",
+          },
+        },
+      },
+    },
+    small: {
+      value: {
+        "font-family": "{private.typography.font-family.sans}",
+        "font-size": "{private.typography.font-size.small}",
+        "font-weight": "{private.typography.font-weight.medium}",
         "line-spacing": "{core.typography.line-spacing.md}",
         "letter-spacing": "{private.typography.letter-spacing.standard}",
       },
@@ -216,50 +267,33 @@
       extensions: {
         telekom: {
           sketch: {
-            uuid: "DCA48C57-DA5C-4B2A-825F-82C7E28955FD",
+            uuid: "63B6E103-0BB8-419B-9A70-67A5D57213DF",
           },
         },
       },
     },
-    "heading-3": {
+    "small-bold": {
       value: {
         "font-family": "{private.typography.font-family.sans}",
-        "font-size": "{private.typography.font-size.headline-2}",
-        "font-weight": "{private.typography.font-weight.extra-bold}",
-        "line-spacing": "{private.typography.line-spacing.tight}",
+        "font-size": "{private.typography.font-size.small}",
+        "font-weight": "{private.typography.font-weight.bold}",
+        "line-spacing": "{core.typography.line-spacing.md}",
         "letter-spacing": "{private.typography.letter-spacing.standard}",
       },
       type: "textStyle",
       extensions: {
         telekom: {
           sketch: {
-            uuid: "09380335-83C1-4B0B-BBAB-EE2194F83C67",
+            uuid: "23BEBB18-0F38-4AF1-AF03-E1A81C6AB5F6",
           },
         },
       },
     },
-    "heading-2": {
+    badge: {
       value: {
         "font-family": "{private.typography.font-family.sans}",
-        "font-size": "{private.typography.font-size.headline-1}",
-        "font-weight": "{private.typography.font-weight.extra-bold}",
-        "line-spacing": "{private.typography.line-spacing.extra-tight}",
-        "letter-spacing": "{private.typography.letter-spacing.standard}",
-      },
-      type: "textStyle",
-      extensions: {
-        telekom: {
-          sketch: {
-            uuid: "F40BF846-4438-4B29-BADD-1A536C109E73",
-          },
-        },
-      },
-    },
-    "heading-1": {
-      value: {
-        "font-family": "{private.typography.font-family.sans}",
-        "font-size": "{private.typography.font-size.title-3}",
-        "font-weight": "{private.typography.font-weight.extra-bold}",
+        "font-size": "{private.typography.font-size.badge}",
+        "font-weight": "{private.typography.font-weight.regular}",
         "line-spacing": "{core.typography.line-spacing.xs}",
         "letter-spacing": "{private.typography.letter-spacing.standard}",
       },
@@ -267,41 +301,7 @@
       extensions: {
         telekom: {
           sketch: {
-            uuid: "748B5B13-3227-4C2F-89BC-A2E273E6727E",
-          },
-        },
-      },
-    },
-    "title-2": {
-      value: {
-        "font-family": "{private.typography.font-family.sans}",
-        "font-size": "{private.typography.font-size.title-2}",
-        "font-weight": "{private.typography.font-weight.extra-bold}",
-        "line-spacing": "{private.typography.line-spacing.extra-tight}",
-        "letter-spacing": "{private.typography.letter-spacing.standard}",
-      },
-      type: "textStyle",
-      extensions: {
-        telekom: {
-          sketch: {
-            uuid: "FE1ECB0C-6279-4900-B93B-1E06A11E25D9",
-          },
-        },
-      },
-    },
-    "title-1": {
-      value: {
-        "font-family": "{private.typography.font-family.sans}",
-        "font-size": "{private.typography.font-size.title-1}",
-        "font-weight": "{private.typography.font-weight.extra-bold}",
-        "line-spacing": "{private.typography.line-spacing.extra-tight}",
-        "letter-spacing": "{private.typography.letter-spacing.standard}",
-      },
-      type: "textStyle",
-      extensions: {
-        telekom: {
-          sketch: {
-            uuid: "95D8FC15-5804-4638-8590-80D8FD5F1B24",
+            uuid: "DD449C5D-7DA4-4E32-8187-2448031BD53F",
           },
         },
       },
