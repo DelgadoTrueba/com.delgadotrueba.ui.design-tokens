@@ -1,14 +1,4 @@
-export const filterObjectByString = (colors, searchString) => {
-    const filteredObj = {};
-    Object.keys(colors).forEach(key => {
-        if (key.includes(searchString)) {
-            filteredObj[key] = colors[key];
-            delete colors[key]; // Efecto secundario: elimina la propiedad del objeto original
-        }
-    });
-    console.log({colors})
-    return filteredObj;
-}
+export {filterObjectByString} from "../utils/themeJson"
 
 export const groupColorsByPrefix = (colors, groupDeep = 4) => {
 

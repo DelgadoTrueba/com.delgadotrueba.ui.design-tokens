@@ -1,38 +1,15 @@
 import { Meta, Typeset } from '@storybook/addon-docs/blocks';
-import { fonts } from "./typography.utils.js";
+import { fonts, parseFontString } from "./typography.utils.js";
 import {getCSSValue} from "../utils/themeJson"
 
 <Meta title="Example/Typography" />
-
-export const typography = {
-  type: {
-    primary: '"Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
-  },
-  weight: {
-    regular: '400',
-    bold: '700',
-    extrabold: '800',
-    black: '900',
-  },
-  size: {
-    s1: 12,
-    s2: 14,
-    s3: 16,
-    m1: 20,
-    m2: 24,
-    m3: 28,
-    l1: 32,
-    l2: 40,
-    l3: 48,
-  },
-};
 
 export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
 
 # Typography
 
 <div>
-{Object.entries(fonts).map(([key]) => (<div>
+{Object.entries(fonts).map(([key, value]) => (<div>
 
   <br/>
   <h3>{key}</h3>
@@ -43,11 +20,11 @@ export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing el
 
   <Typeset
     fontSizes={[
-      Number(typography.size.s1)
+      parseFontString(value).size
     ]}
-    fontWeight={typography.weight.black}
+    fontWeight={parseFontString(value).weight}
     sampleText={SampleText}
-    fontFamily={typography.type.primary}
+    fontFamily={parseFontString(value).fontFamily}
   />
 </div>)
 )}
