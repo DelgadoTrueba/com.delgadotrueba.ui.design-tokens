@@ -35,6 +35,7 @@ export default {
           filter: (token) => {
             return token.path[0] !== 'core'
               && (token.original.value?.light == null || token.original.value?.dark == null)
+              && !token.path.includes('private')
           }
         }
       }),
@@ -54,7 +55,8 @@ export default {
           format,
           destination: OUTPUT_BASE_FILENAME + '.light' + ext,
           filter: (token) =>
-            token.path[0] !== 'core' && token.original.value?.light != null,
+            token.path[0] !== 'core' && token.original.value?.light != null
+            && !token.path.includes('private')
         }
       })
     },
@@ -70,7 +72,8 @@ export default {
           format,
           destination: OUTPUT_BASE_FILENAME + '.dark' + ext,
           filter: (token) =>
-            token.path[0] !== 'core' && token.original.value?.dark != null,
+            token.path[0] !== 'core' && token.original.value?.dark != null
+            && !token.path.includes('private')
         }
       }),
       actions: ['bundle_css'],
