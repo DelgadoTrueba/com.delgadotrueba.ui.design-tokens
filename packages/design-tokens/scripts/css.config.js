@@ -37,7 +37,8 @@ export default {
               && (token.original.value?.light == null || token.original.value?.dark == null)
           }
         }
-      })
+      }),
+      actions: ["copy_assets"]
     },
     cssLightData: {
       transforms: [
