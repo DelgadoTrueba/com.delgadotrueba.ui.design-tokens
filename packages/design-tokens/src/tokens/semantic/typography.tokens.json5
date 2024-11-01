@@ -1,6 +1,26 @@
 {
-  private: {
-    typography: {
+  typography: {
+    'font-face': {
+      sans: {
+        value: {
+          'font-family': '{core.typography.font-family.sans.value}',
+          src: "url('/assets/fonts/OpenSans-Regular.ttf') format('truetype')",
+          'font-weight': 'normal',
+          'font-style': 'normal',
+        },
+        type: 'textFace',
+      },
+      mono: {
+        value: {
+          'font-family': '{core.typography.font-family.mono.value}',
+          src: "url('/assets/fonts/Roboto-Regular.ttf') format('truetype')",
+          'font-weight': 'normal',
+          'font-style': 'normal',
+        },
+        type: 'textFace',
+      },
+    },
+    private: {
       'font-size': {
         badge: {
           value: '{core.typography.font-scale.1.value}',
@@ -49,11 +69,11 @@
       },
       'font-family': {
         sans: {
-          value: '{core.typography.font-family.sans.value}',
+          value: '{typography.font-face.sans.value.font-family}',
           type: 'font',
         },
         mono: {
-          value: '{core.typography.font-family.mono.value}',
+          value: '{typography.font-face.mono.value.font-family}',
           type: 'font',
         },
       },

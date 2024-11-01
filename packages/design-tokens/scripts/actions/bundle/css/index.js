@@ -12,6 +12,9 @@ StyleDictionary.registerAction({
         const common = JSON.parse(
             fs.readFileSync(buildPath + OUTPUT_BASE_FILENAME + '.common.json')
         );
+        const fonts = JSON.parse(
+            fs.readFileSync(buildPath + OUTPUT_BASE_FILENAME + '.fonts.json')
+        );
         const lightOnly = JSON.parse(
             fs.readFileSync(buildPath + OUTPUT_BASE_FILENAME + '.light.json')
         );
@@ -20,6 +23,9 @@ StyleDictionary.registerAction({
         );
         const data = `:root {
   ${printVariables(common)}
+
+  ${printFonts(fonts)}
+
   ${printVariables(lightOnly)}
   }
   
@@ -50,4 +56,24 @@ function printVariables(json, indentation = '  ') {
             return `${indentation}--${key}: ${value};`;
         })
         .join('\n');
+}
+
+
+function printFonts(fonts){
+
+const template = (font) => {
+    return `@font-face {
+font-family: ${font['font-family']};
+src:  ${font.src};
+font-weight:  ${font['font-weight']};
+font-style:  ${font['font-style']};
+}`
+}
+
+return (Object.values(fonts) || []).reduce((acc, font) => {
+    const fontFace = template(font)
+    return `${acc}${fontFace}\n`
+}, '')
+
+
 }

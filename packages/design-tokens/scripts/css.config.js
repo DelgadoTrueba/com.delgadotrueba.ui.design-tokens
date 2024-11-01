@@ -35,11 +35,28 @@ export default {
           filter: (token) => {
             return token.path[0] !== 'core'
               && (token.original.value?.light == null || token.original.value?.dark == null)
+              && (token.original?.type !== 'textFace')
               && !token.path.includes('private')
           }
         }
+      })
+    },
+    fontsData: {
+      transforms: [...cssTransformGroup],
+      prefix: PREFIX,
+      buildPath: OUTPUT_PATH + 'css/',
+      files: [
+        { format: 'json/flat', ext: '.json' }
+      ].map(({ format, ext }) => {
+        return {
+          format,
+          destination: OUTPUT_BASE_FILENAME + '.fonts' + ext,
+          filter: (token) => {
+            return token.path[0] !== 'core'
+              && (token.original?.type === 'textFace')
+          }
+        }
       }),
-      actions: ["copy_assets"]
     },
     cssLightData: {
       transforms: [
@@ -76,7 +93,7 @@ export default {
             && !token.path.includes('private')
         }
       }),
-      actions: ['bundle_css'],
+      actions: ["copy_assets", 'bundle_css'],
     },
   },
 };

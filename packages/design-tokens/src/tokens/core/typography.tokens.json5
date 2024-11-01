@@ -3,11 +3,11 @@
         "typography": {
             "font-family": {
                 "sans": {
-                    "value": "TeleNeoWeb, sans-serif",
+                    "value": "sans-rg",
                     "type": "font"
                 },
                 "mono": {
-                    "value": "monospace",
+                    "value":  "monospace-rg",
                     "type": "font"
                 }
             },
