@@ -4,8 +4,8 @@
       sans: {
         value: {
           'font-family': '{core.typography.font-family.sans.value}',
-          src: "url('/assets/fonts/OpenSans-Regular.ttf') format('truetype')",
-          'font-weight': 'normal',
+          src: "url('/assets/fonts/opensans-regular-webfont.woff2') format('woff2'), url('/assets/fonts/opensans-regular-webfont.woff') format('woff')",  
+          'font-weight': '800',
           'font-style': 'normal',
         },
         type: 'textFace',
