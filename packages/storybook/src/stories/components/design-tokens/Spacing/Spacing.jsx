@@ -14,7 +14,7 @@ function remToPx(rem) {
 
 const data = (Object.entries(spacings) || []).map(([key, value]) => {
   return {
-    name: key.replace('dt-size-generic', '').replace(/-/g, ' '),
+    name: key.replace('dt-size-generic-', ''),
     size: value,
     pixels: `${remToPx(value)}px`,
   };
