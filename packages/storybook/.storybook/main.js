@@ -16,6 +16,15 @@ module.exports = {
         transcludeMarkdown: true,
       },
     },
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        postcssLoaderOptions: {
+          // When using postCSS 8
+          implementation: require('postcss'),
+        },
+      },
+    },
   ],
   "framework": "@storybook/html",
   "core": {

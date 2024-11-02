@@ -1,4 +1,5 @@
 import withTheme, { backgrounds, ThemeMdx } from './decorators/withTheme';
+import "../src/index.css"
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
