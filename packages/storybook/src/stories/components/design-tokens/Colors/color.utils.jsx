@@ -1,4 +1,4 @@
-export {filterObjectByString} from "../utils/themeJson"
+export {filterObjectByString} from "../../../../utils/themeJson"
 
 export const groupColorsByPrefix = (colors, groupDeep = 4) => {
 
@@ -33,6 +33,6 @@ export  const transformarColores = (colores) => {
     return coloresTransformados;
   };
 
-  import colorsLight from '../../../design-tokens/dist/css/dt-theme.light.json';
+  import colorsLight from '../../../../../../design-tokens/dist/css/dt-theme.light.json';
 
   export const colors =  colorsLight
