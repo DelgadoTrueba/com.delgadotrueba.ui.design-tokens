@@ -7,7 +7,7 @@ const cssTransformGroup = [
   'size/rem',             // Converts size values to rem units
   'color/css',            // Converts color values to CSS-compatible formats
   // Your custom transformer
-  'modular-scale/px',
+  'modular-scale/rem',
   'shadow/css',
   'color/alpha',
   'text-style/css',
