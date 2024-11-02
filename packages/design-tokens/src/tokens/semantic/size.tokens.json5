@@ -22,17 +22,11 @@
         type: "dimension",
       },
     },
-    "form-element-height": {
-      small: {
-        value: "{core.dimension.3000.value}",
-        type: "dimension",
-      },
-      standard: {
-        value: "{core.dimension.3375.value}",
-        type: "dimension",
-      },
-    },
     generic: {
+      "size-0": {
+        value: "{core.dimension.none.value}",
+        type: "dimension",
+      },
       "size-01": {
         value: "{core.dimension.500.value}",
         type: "dimension",
