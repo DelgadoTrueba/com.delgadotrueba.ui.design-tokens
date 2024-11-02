@@ -13,33 +13,31 @@ function remToPx(rem) {
 }
 
 const data = (Object.entries(spacings) || []).map(([key, value]) => {
-  return { name: key.replace('dt-size-generic', '').replace(/-/g, ' '), size: value, pixels: `${remToPx(value)}px` };
+  return {
+    name: key.replace('dt-size-generic', '').replace(/-/g, ' '),
+    size: value,
+    pixels: `${remToPx(value)}px`,
+  };
 });
 
 export const Spacing = () => {
   return (
-    <div class="table-container">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Size</th>
-            <th>Pixels</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((row, index) => (
-            <tr key={index}>
-              <td>{row.name}</td>
-              <td>{row.size}</td>
-              <td class="pixel-cell">
-                <span class="pixel-bar" style={{ width: row.pixels }}></span>
-                {row.pixels}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div class="flex-table">
+      <div class="flex-row header">
+        <div class="flex-cell">Name</div>
+        <div class="flex-cell">Size</div>
+        <div class="pixel-cell">Pixels</div>
+      </div>
+        {data.map((row, index) => (
+          <div class="flex-row">
+            <div class="flex-cell">{row.name}</div>
+            <div class="flex-cell">{row.size}</div>
+            <div class="flex-cell">
+              <span class="pixel-box" style={{ width: row.pixels }}></span>
+              {row.pixels}
+            </div>
+          </div>
+        ))}
     </div>
   );
 };

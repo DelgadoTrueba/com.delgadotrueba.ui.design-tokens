@@ -10,6 +10,6 @@ const Template = ({ label, ...args }) => {
   return Spacing({ label, ...args });
 };
 
-export const Primary = Template.bind({});
-Primary.args = {};
+export const Size = Template.bind({});
+Size.args = {};
 
