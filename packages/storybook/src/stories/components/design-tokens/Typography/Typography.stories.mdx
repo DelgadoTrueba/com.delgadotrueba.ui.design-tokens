@@ -1,0 +1,31 @@
+import { Meta, Typeset } from '@storybook/addon-docs/blocks';
+import { fonts, parseFontString } from "./typography.utils.js";
+import {getCSSValue} from "../../../../utils/themeJson"
+
+<Meta title="DesignTokens/Typography" />
+
+export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+
+# Typography
+
+<div>
+{Object.entries(fonts).map(([key, value]) => (<div>
+
+  <br/>
+  <h3>{key}</h3>
+
+  <p>```css</p>
+  <p>font: <span>{getCSSValue(key)}</span></p>
+  <p>```</p>
+
+  <Typeset
+    fontSizes={[
+      parseFontString(value).size
+    ]}
+    fontWeight={parseFontString(value).weight}
+    sampleText={SampleText}
+    fontFamily={parseFontString(value).fontFamily}
+  />
+</div>)
+)}
+</div>

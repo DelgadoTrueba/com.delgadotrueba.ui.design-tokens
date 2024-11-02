@@ -1,0 +1,52 @@
+.flex-table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.flex-row {
+  display: flex;
+  width: 100%;
+  align-items: center; /* Alinea verticalmente el contenido */
+  border-bottom: 1px solid #ddd;
+}
+
+.flex-row.header {
+  font-weight: bold;
+  background-color: #f9f9f9;
+}
+
+.flex-cell {
+  flex: 1;
+  padding: 10px;
+  text-align: left;
+}
+
+.flex-cell:nth-child(1) {
+  flex: 0 1 70px;
+}
+
+.flex-cell:nth-child(2) {
+  flex: 0 1 70px;
+}
+
+.flex-cell:nth-child(3) {
+  flex: 1;
+  border-right: none;
+}
+
+.pixel-box {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #e57373; /* Color del cuadrado */
+  margin-right: 5px; /* Espacio entre el cuadrado y el texto */
+  vertical-align: middle; /* Alinea el cuadrado con el texto */
+}
+
+/* Opcional: elimina el borde inferior de la última fila */
+.flex-row:last-child {
+  border-bottom: none;
+}
