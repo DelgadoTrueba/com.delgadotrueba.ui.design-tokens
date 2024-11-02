@@ -3,11 +3,7 @@
         "typography": {
             "font-family": {
                 "sans": {
-                    "value": "open_sansregular",
-                    "type": "font"
-                },
-                "mono": {
-                    "value":  "monospace-rg",
+                    "value": "open_sans",
                     "type": "font"
                 }
             },
