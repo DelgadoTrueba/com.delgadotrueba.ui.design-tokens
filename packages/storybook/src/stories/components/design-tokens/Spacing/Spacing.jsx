@@ -25,25 +25,51 @@ const data = (Object.entries(spacings) || [])
 
 export const Spacing = () => {
   return (
-    <div class="flex-table">
-      <div class="flex-row header">
-        <div class="flex-cell">Name</div>
-        <div class="flex-cell">CSS</div>
-        <div class="flex-cell">Size</div>
-        <div class="pixel-cell">Pixels</div>
-      </div>
-      {data.map((row, index) => (
-        <div class="flex-row">
-          <div class="flex-cell">w-{row.name}</div>
-          <div class="flex-cell">var(--{row.key})</div>
-          <div class="flex-cell">{row.size}</div>
-          <div class="flex-cell">
-            {/* <span class="pixel-box" style={{ width: row.pixels }}></span> */}
-            <span class={`pixel-box w-${row.name}`}></span>
-            {row.pixels}
-          </div>
+    <>
+      <br />
+      <p>
+        La escala de espaciado predeterminada de esta librería se basa en el
+        sistema de
+        <a
+          href="https://tailwindcss.com/docs/customizing-spacing"
+          target='blank'
+          style={{ color: 'blue' }}
+        >
+          {' '}
+          Tailwind
+        </a>
+        , lo que permite utilizar clases como w-, h-, m-, p-, entre otras, para
+        definir anchos, alturas, márgenes y rellenos de forma coherente. Cada
+        unidad de espaciado corresponde a 0.25rem, lo cual se traduce en 4px en
+        la mayoría de los navegadores actuales.
+      </p>
+      <br />
+      <p>
+        Esta escala facilita la consistencia visual y permite diseñar con un
+        ritmo visual claro, manteniendo una relación coherente entre los
+        diferentes elementos de la interfaz.
+      </p>
+      <br />
+      <div class="flex-table">
+        <div class="flex-row header">
+          <div class="flex-cell">Name</div>
+          <div class="flex-cell">CSS</div>
+          <div class="flex-cell">Size</div>
+          <div class="pixel-cell">Pixels</div>
         </div>
-      ))}
-    </div>
+        {data.map((row, index) => (
+          <div class="flex-row">
+            <div class="flex-cell">w-{row.name}</div>
+            <div class="flex-cell">var(--{row.key})</div>
+            <div class="flex-cell">{row.size}</div>
+            <div class="flex-cell">
+              {/* <span class="pixel-box" style={{ width: row.pixels }}></span> */}
+              <span class={`pixel-box w-${row.name}`}></span>
+              {row.pixels}
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
