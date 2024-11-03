@@ -35,7 +35,17 @@ module.exports = {
     "w-global-size-23",
     "w-global-size-24",
     "w-global-size-25",
-    "w-global-size-26"
+    "w-global-size-26",
+    "w-global-size-27",
+    "w-global-size-28",
+    "w-global-size-29",
+    "w-global-size-30",
+    "w-global-size-31",
+    "w-global-size-32",
+    "w-global-size-33",
+    "w-global-size-34",
+    "w-global-size-35",
+    "w-global-size-36"
   ]
   
 }
