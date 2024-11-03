@@ -25,11 +25,11 @@
 }
 
 .flex-cell:nth-child(1) {
-  flex: 0 1 70px;
+  flex: 0 1 80px;
 }
 
 .flex-cell:nth-child(2) {
-  flex: 0 1 70px;
+  flex: 0 1 100px;
 }
 
 .flex-cell:nth-child(3) {
@@ -39,7 +39,6 @@
 
 .pixel-box {
   display: inline-block;
-  width: 10px;
   height: 10px;
   background-color: #e57373; /* Color del cuadrado */
   margin-right: 5px; /* Espacio entre el cuadrado y el texto */

@@ -45,7 +45,9 @@ StyleDictionary.registerFormat({
   
         module.exports =
           {
-            theme: ${JSON.stringify(tokens)},
+            theme: {
+              extend: ${JSON.stringify(tokens)}
+            },
             plugins: [
               /**
                * Custom plugin to convert \`text-style\` design token to the \`font\` css shorthand property

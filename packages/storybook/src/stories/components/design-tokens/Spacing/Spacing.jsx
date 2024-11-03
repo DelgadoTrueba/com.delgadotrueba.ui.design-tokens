@@ -2,7 +2,7 @@ import './Spacing.css';
 
 import themeCommon from '../../../../../../design-tokens/dist/css/dt-theme.common.json';
 import { filterObjectByString } from '../../../../utils/themeJson';
-export const spacings = filterObjectByString(themeCommon, 'size-generic');
+export const spacings = filterObjectByString(themeCommon, 'size-global');
 console.log({ spacings });
 
 function remToPx(rem) {
@@ -14,7 +14,7 @@ function remToPx(rem) {
 
 const data = (Object.entries(spacings) || []).map(([key, value]) => {
   return {
-    name: key.replace('dt-size-generic-', ''),
+    name: key.replace('dt-size-global-', ''),
     size: value,
     pixels: `${remToPx(value)}px`,
   };
@@ -23,7 +23,8 @@ const data = (Object.entries(spacings) || []).map(([key, value]) => {
 export const Spacing = () => {
   return (
     <div class="flex-table">
-      <h1 class="text-3xl font-bold underline text-yellow-400">Hello world!</h1>
+      <h1 class="text-yellow-400 w-global-size-26">Hello world!</h1>
+
       <div class="flex-row header">
         <div class="flex-cell">Name</div>
         <div class="flex-cell">Size</div>
@@ -34,7 +35,8 @@ export const Spacing = () => {
           <div class="flex-cell">{row.name}</div>
           <div class="flex-cell">{row.size}</div>
           <div class="flex-cell">
-            <span class="pixel-box" style={{ width: row.pixels }}></span>
+            {/* <span class="pixel-box" style={{ width: row.pixels }}></span> */}
+            <span class={`pixel-box w-global-${row.name}`}></span>
             {row.pixels}
           </div>
         </div>

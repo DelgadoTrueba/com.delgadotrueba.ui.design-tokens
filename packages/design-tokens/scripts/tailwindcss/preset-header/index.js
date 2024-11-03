@@ -11,7 +11,6 @@ StyleDictionary.registerFileHeader({
             ``,
             `You can find info about usage here:`,
             ` - TODO learn`,
-            `  - https://github.com/telekom/design-tokens#how-to-use-the-tailwindcss-preset`,
             `  - https://tailwindcss.com/docs/presets`,
         ];
     },
