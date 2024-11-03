@@ -2,7 +2,7 @@ import './Spacing.css';
 
 import themeCommon from '../../../../../../design-tokens/dist/css/dt-theme.common.json';
 import { filterObjectByString } from '../../../../utils/themeJson';
-export const spacings = filterObjectByString(themeCommon, 'size-global');
+export const spacings = filterObjectByString(themeCommon, 'dt-size-');
 console.log({ spacings });
 
 function remToPx(rem) {
@@ -12,20 +12,20 @@ function remToPx(rem) {
   return remValue * baseFontSize;
 }
 
-const data = (Object.entries(spacings) || []).map(([key, value]) => {
-  return {
-    key,
-    name: key.replace('dt-size-global-', '').replace("-", "."),
-    size: value,
-    pixels: `${remToPx(value)}px`,
-  };
-}).sort((a, b) => remToPx(a.size) - remToPx(b.size) )
+const data = (Object.entries(spacings) || [])
+  .map(([key, value]) => {
+    return {
+      key,
+      name: key.replace('dt-size-', '').replace('-', '.'),
+      size: value,
+      pixels: `${remToPx(value)}px`,
+    };
+  })
+  .sort((a, b) => remToPx(a.size) - remToPx(b.size));
 
 export const Spacing = () => {
   return (
     <div class="flex-table">
-      <h1 class="text-yellow-400 w-global-size-26">Hello world!</h1>
-
       <div class="flex-row header">
         <div class="flex-cell">Name</div>
         <div class="flex-cell">CSS</div>

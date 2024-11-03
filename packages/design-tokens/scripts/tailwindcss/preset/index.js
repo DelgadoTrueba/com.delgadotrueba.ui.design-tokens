@@ -107,7 +107,7 @@ const mappings = [
   { original: ['typography', 'font-family'], tailwindcss: ['fontFamily'] },
   { original: ['typography', 'font-weight'], tailwindcss: ['fontWeight'] },
   { original: ['typography', 'line-spacing'], tailwindcss: ['lineHeight'] },
-  { original: ['size', "global"], tailwindcss: ['spacing'] },
+  { original: ['size'], tailwindcss: ['spacing'] },
   {
     original: ['typography', 'letter-spacing'],
     tailwindcss: ['letterSpacing'],
