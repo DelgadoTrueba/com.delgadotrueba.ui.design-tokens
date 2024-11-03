@@ -19,7 +19,7 @@ StyleDictionary.registerFormat({
       .map(patchSpacingKeys)
       .map(patchStandardToDefault)
       .forEach((token) => {
-        deep(tokens, token.configKeys, `var(--${token.name})`);
+        deep(tokens, token.configKeys, `var(--${token.name.replace(".", "-")})`);
       });
 
     const rawSource = `
@@ -45,7 +45,9 @@ StyleDictionary.registerFormat({
   
         module.exports =
           {
-            theme: ${JSON.stringify(tokens)},
+            theme: {
+              extend: ${JSON.stringify(tokens)}
+            },
             plugins: [
               /**
                * Custom plugin to convert \`text-style\` design token to the \`font\` css shorthand property

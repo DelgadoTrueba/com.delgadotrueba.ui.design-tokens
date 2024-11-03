@@ -15,7 +15,7 @@ module.exports = {
         sourceLoaderOptions: null,
         transcludeMarkdown: true,
       },
-    },
+    }
   ],
   "framework": "@storybook/html",
   "core": {
@@ -38,5 +38,26 @@ module.exports = {
       ]
     ]
   }),
+  webpackFinal: async (config) => {
+    config.module.rules.push({
+      test: /\.css$/,
+      use: [
+        {
+          loader: 'postcss-loader',
+          options: {
+            postcssOptions: {
+              plugins: [
+                require('tailwindcss'),
+                require('autoprefixer'),
+              ],
+              // When using postCSS 8
+              implementation: require('postcss')
+            },
+          },
+        },
+      ],
+    })
+    return config
+  },
   staticDirs: ['../../design-tokens/dist/css'],
 }
