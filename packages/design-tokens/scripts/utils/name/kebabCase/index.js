@@ -4,7 +4,7 @@ export function kebabCase(str) {
         // Replace capital letters in the middle of words with hyphen + lowercase letter
         .replace(/([a-z])([A-Z])/g, '$1-$2')
         // Replace non-alphanumeric characters (except hyphens) with a space
-        .replace(/[^a-zA-Z0-9-]+/g, ' ')
+        .replace(/[^a-zA-Z0-9-.]+/g, ' ')
         // Trim spaces at the start and end of the string
         .trim()
         // Replace spaces and consecutive hyphens with a single hyphen

@@ -19,7 +19,7 @@ StyleDictionary.registerFormat({
       .map(patchSpacingKeys)
       .map(patchStandardToDefault)
       .forEach((token) => {
-        deep(tokens, token.configKeys, `var(--${token.name})`);
+        deep(tokens, token.configKeys, `var(--${token.name.replace(".", "-")})`);
       });
 
     const rawSource = `
@@ -107,7 +107,7 @@ const mappings = [
   { original: ['typography', 'font-family'], tailwindcss: ['fontFamily'] },
   { original: ['typography', 'font-weight'], tailwindcss: ['fontWeight'] },
   { original: ['typography', 'line-spacing'], tailwindcss: ['lineHeight'] },
-  { original: ['size'], tailwindcss: ['spacing'] },
+  { original: ['size', "global"], tailwindcss: ['spacing'] },
   {
     original: ['typography', 'letter-spacing'],
     tailwindcss: ['letterSpacing'],

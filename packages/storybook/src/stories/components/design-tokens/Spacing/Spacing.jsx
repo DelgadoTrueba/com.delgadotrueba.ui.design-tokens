@@ -14,11 +14,12 @@ function remToPx(rem) {
 
 const data = (Object.entries(spacings) || []).map(([key, value]) => {
   return {
-    name: key.replace('dt-size-global-', ''),
+    key,
+    name: key.replace('dt-size-global-', '').replace("-", "."),
     size: value,
     pixels: `${remToPx(value)}px`,
   };
-});
+}).sort((a, b) => remToPx(a.size) - remToPx(b.size) )
 
 export const Spacing = () => {
   return (
@@ -27,16 +28,18 @@ export const Spacing = () => {
 
       <div class="flex-row header">
         <div class="flex-cell">Name</div>
+        <div class="flex-cell">CSS</div>
         <div class="flex-cell">Size</div>
         <div class="pixel-cell">Pixels</div>
       </div>
       {data.map((row, index) => (
         <div class="flex-row">
-          <div class="flex-cell">{row.name}</div>
+          <div class="flex-cell">w-{row.name}</div>
+          <div class="flex-cell">var(--{row.key})</div>
           <div class="flex-cell">{row.size}</div>
           <div class="flex-cell">
             {/* <span class="pixel-box" style={{ width: row.pixels }}></span> */}
-            <span class={`pixel-box w-global-${row.name}`}></span>
+            <span class={`pixel-box w-${row.name}`}></span>
             {row.pixels}
           </div>
         </div>
