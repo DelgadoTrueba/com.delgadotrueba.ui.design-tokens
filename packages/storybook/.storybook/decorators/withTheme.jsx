@@ -29,6 +29,7 @@ export function setTheme(theme) {
 
 export default (Story) => {
   const [global] = useGlobals();
+  setTheme(global?.backgrounds?.value || LIGHT);
 
   useEffect(() => {
     setTheme(global?.backgrounds?.value || LIGHT);
