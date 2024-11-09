@@ -49,7 +49,7 @@ const additionalColor = groupColorsByPrefix(
 );
 
 const textIconColor = groupColorsByPrefix(
-  filterObjectByString(colors, 'color-text-and-icon'),
+  filterObjectByString(colors, 'text-and-icon'),
   5
 );
 
@@ -59,6 +59,7 @@ const mapperColors = (obj) => {
       label: key,
       tailwind: key
         .replace('dt-color-', '')
+        .replace('dt-', '')
         .replace('-standard', '')
         .replace('text-and-icon', 'text-&-icon')
     };

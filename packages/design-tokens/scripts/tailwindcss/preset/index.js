@@ -98,7 +98,7 @@ StyleDictionary.registerFormat({
  */
 const mappings = [
   // { original: ['color', 'text-icon'], tailwindcss: ['colors', 'text-&-icon'] },
-  { original: ['color', 'text-and-icon'], tailwindcss: ['colors', 'text-&-icon'] },
+  { original: ['text-and-icon'], tailwindcss: ['colors', 'text-&-icon'] },
   { original: ['color'], tailwindcss: ['colors'] },
   { original: ['line-weight'], tailwindcss: ['borderWidth'] },
   { original: ['motion', 'duration'], tailwindcss: ['transitionDuration'] },
