@@ -3,7 +3,7 @@ export const filterObjectByString = (colors, searchString) => {
     Object.keys(colors).forEach(key => {
         if (key.includes(searchString)) {
             filteredObj[key] = colors[key];
-            delete colors[key]; // Efecto secundario: elimina la propiedad del objeto original
+            // delete colors[key]; // Efecto secundario: elimina la propiedad del objeto original
         }
     });
     return filteredObj;

@@ -1,7 +1,7 @@
 import { Spacing } from './Spacing';
 
 export default {
-  title: 'DesignTokens/Spacing',
+  title: 'DesignTokens/Size',
   argTypes: {
   },
 };
