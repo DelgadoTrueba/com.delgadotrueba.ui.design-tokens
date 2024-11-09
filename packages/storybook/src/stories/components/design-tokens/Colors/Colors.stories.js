@@ -54,7 +54,7 @@ const textIconColor = groupColorsByPrefix(
 );
 
 const mapperColors = (obj) => {
-  const aux = Object.entries(obj).map(([key, value]) => {
+  return Object.entries(obj).map(([key, value]) => {
     return {
       label: key,
       tailwind: key
@@ -64,8 +64,6 @@ const mapperColors = (obj) => {
         .replace('text-and-icon', 'text-&-icon')
     };
   });
-  console.log({ aux });
-  return aux;
 };
 
 const Template = ({ label, ...args }) => {
