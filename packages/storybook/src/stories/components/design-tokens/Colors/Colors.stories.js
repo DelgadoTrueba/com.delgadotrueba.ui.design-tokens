@@ -49,20 +49,28 @@ const additionalColor = groupColorsByPrefix(
 );
 
 const textIconColor = groupColorsByPrefix(
-  filterObjectByString(colors, 'color-text-icon'),
+  filterObjectByString(colors, 'color-text-and-icon'),
   5
 );
 
 const mapperColors = (obj) => {
-  return Object.entries(obj).map(([key, value]) => {
-    return { label: key };
+  const aux = Object.entries(obj).map(([key, value]) => {
+    return {
+      label: key,
+      tailwind: key
+        .replace('dt-color-', '')
+        .replace('-standard', '')
+        .replace('text-and-icon', 'text-&-icon')
+    };
   });
+  console.log({ aux });
+  return aux;
 };
 
 const Template = ({ label, ...args }) => {
   return (
     <>
-      <p>
+      <p class="bg-red-700">
         La paleta de colores predeterminada de esta librería se inspira en el
         sistema de Tailwind, proporcionando una gama de colores coherente y
         versátil para aplicar en distintos elementos de la interfaz. Los colores

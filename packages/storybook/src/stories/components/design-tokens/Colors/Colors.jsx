@@ -91,13 +91,14 @@ export const Color = ({ colorsData, colorName }) => {
           <div class="color-row">
             <div
               key={index}
-              class="color-swatch"
+              class={`color-swatch bg-${color.tailwind}`}
               style={{
-                backgroundColor: `var(--${color.label})`,
+                // backgroundColor: `var(--${color.label})`,
                 color: getContrastingColor(getColorValue(color.label)),
               }}
             >
               <span class="color-label">var(--{color.label})</span>
+              <span class="color-label">bg-{color.tailwind}</span>
               <span class="color-hex">{getColorValue(color.label)}</span>
             </div>
           </div>

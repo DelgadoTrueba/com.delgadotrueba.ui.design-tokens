@@ -1,7 +1,7 @@
 {
   color: {
     comment: "Telekom brand color design tokens",
-    "text-&-icon": {
+    "text-and-icon": {
       standard: {
         comment: "Default text color with highest contrast.",
         value: {
