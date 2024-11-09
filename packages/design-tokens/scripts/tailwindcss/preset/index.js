@@ -162,5 +162,8 @@ function patchStandardToDefault(token) {
   if (token.path.at(-1) === 'standard' && token.path[0] !== 'size') {
     token.configKeys[token.configKeys.length - 1] = 'DEFAULT';
   }
+  if (token.path.at(-1) === " " && token.path[0] !== 'size') {
+    token.configKeys[token.configKeys.length - 1] = 'DEFAULT';
+  }
   return token;
 }
