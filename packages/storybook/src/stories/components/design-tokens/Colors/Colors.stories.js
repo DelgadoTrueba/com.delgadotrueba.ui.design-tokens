@@ -80,6 +80,8 @@ const Template = ({ label, ...args }) => {
         personalización de colores en el texto, fondos y bordes de los
         componentes.
       </p>
+      <br/>
+      <p>Solo podran utilizarse los siguientes colores, por ejemplo bg-red-100 no estaría disponible</p>
       <div>
         {[
           { dataName: 'color-background', data: backgroundColors },

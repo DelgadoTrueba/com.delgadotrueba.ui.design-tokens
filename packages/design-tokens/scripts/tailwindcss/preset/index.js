@@ -1,7 +1,7 @@
 import StyleDictionary from 'style-dictionary';
-import prettier from 'prettier'
+import prettier from 'prettier';
 import deep from 'deep-get-set';
-import { kebabCase } from "../../utils/name/kebabCase/index.js"
+import { kebabCase } from '../../utils/name/kebabCase/index.js';
 
 /**
  * Custom formatter for Tailwind CSS config preset
@@ -9,7 +9,7 @@ import { kebabCase } from "../../utils/name/kebabCase/index.js"
 StyleDictionary.registerFormat({
   name: 'tailwindcss/preset',
   formatter: function ({ dictionary, file }) {
-    const tokens = {};
+    const _tokens = {};
     const header = StyleDictionary.formatHelpers.fileHeader({ file });
     deep.p = true;
 
@@ -19,8 +19,18 @@ StyleDictionary.registerFormat({
       .map(patchSpacingKeys)
       .map(patchStandardToDefault)
       .forEach((token) => {
-        deep(tokens, token.configKeys, `var(--${token.name.replace(".", "-")})`);
+        deep(
+          _tokens,
+          token.configKeys,
+          `var(--${token.name.replace('.', '-')})`
+        );
       });
+
+    const tokensExtend = {
+      ..._tokens,
+    };
+    delete tokensExtend.colors;
+    delete tokensExtend.spacing;
 
     const rawSource = `
         ${header}
@@ -46,7 +56,9 @@ StyleDictionary.registerFormat({
         module.exports =
           {
             theme: {
-              extend: ${JSON.stringify(tokens)}
+              colors:  ${JSON.stringify(_tokens.colors)},
+              spacing:  ${JSON.stringify(_tokens.spacing)},
+              extend: ${JSON.stringify(tokensExtend)}
             },
             plugins: [
               /**
