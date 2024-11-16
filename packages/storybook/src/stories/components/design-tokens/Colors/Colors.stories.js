@@ -9,46 +9,46 @@ export default {
 import {
   transformarColores,
   filterObjectByString,
-  groupColorsByPrefix,
+  groupByPrefix,
   colors,
 } from './color.utils.jsx';
 
-const primaryColors = groupColorsByPrefix(
+const primaryColors = groupByPrefix(
   filterObjectByString(colors, 'color-primary'),
   3
 );
 
-const backgroundColors = groupColorsByPrefix(
+const backgroundColors = groupByPrefix(
   filterObjectByString(colors, 'color-background'),
   4
 );
 
-const uiBorderColor = groupColorsByPrefix(
+const uiBorderColor = groupByPrefix(
   filterObjectByString(colors, 'color-ui-border'),
   4
 );
 
-const uiStateColor = groupColorsByPrefix(
+const uiStateColor = groupByPrefix(
   filterObjectByString(colors, 'color-ui-state'),
   4
 );
 
-const uiColor = groupColorsByPrefix(
+const uiColor = groupByPrefix(
   filterObjectByString(colors, 'color-ui'),
   2
 );
 
-const funtionalColor = groupColorsByPrefix(
+const funtionalColor = groupByPrefix(
   filterObjectByString(colors, 'color-functional'),
   4
 );
 
-const additionalColor = groupColorsByPrefix(
+const additionalColor = groupByPrefix(
   filterObjectByString(colors, 'color-additional'),
   3
 );
 
-const textIconColor = groupColorsByPrefix(
+const textIconColor = groupByPrefix(
   filterObjectByString(colors, 'text-and-icon'),
   5
 );
@@ -73,13 +73,13 @@ const Template = ({ label, ...args }) => {
         La paleta de colores predeterminada de esta librería se inspira en el
         sistema de Tailwind, proporcionando una gama de colores coherente y
         versátil para aplicar en distintos elementos de la interfaz. Los colores
-        están disponibles globalmente en el framework y pueden ser utilizados en
+        están disponibles globalmente en la libreria y pueden ser utilizados en
         clases como text-, bg-, border-, entre otras, facilitando la
         personalización de colores en el texto, fondos y bordes de los
         componentes.
       </p>
       <br/>
-      <p>Solo podran utilizarse los siguientes colores, por ejemplo bg-red-100 no estaría disponible</p>
+      <p>Solo podran utilizarse los siguientes colores:</p>
       <div>
         {[
           { dataName: 'color-background', data: backgroundColors },

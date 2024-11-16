@@ -17,3 +17,22 @@ export const getCSSValue = (cssVar) => {
 
     return style.getPropertyValue(`--${cssVar}`);
 }
+
+export const groupByPrefix = (json, groupDeep = 4) => {
+
+    const grouped = {};
+    Object.entries(json).forEach(([key, value]) => {
+      let keyArr =  key.split('-')
+
+      while(keyArr.length > groupDeep){
+        keyArr = keyArr.slice(0, -1)
+      }
+      const prefix = keyArr.join('-');
+
+      if (!grouped[prefix]) {
+        grouped[prefix] = {};
+      }
+      grouped[prefix][key] = value;
+    });
+    return grouped;
+  };
