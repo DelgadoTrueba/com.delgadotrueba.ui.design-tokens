@@ -73,13 +73,13 @@ const Template = ({ label, ...args }) => {
         La paleta de colores predeterminada de esta librería se inspira en el
         sistema de Tailwind, proporcionando una gama de colores coherente y
         versátil para aplicar en distintos elementos de la interfaz. Los colores
-        están disponibles globalmente en el framework y pueden ser utilizados en
+        están disponibles globalmente en la libreria y pueden ser utilizados en
         clases como text-, bg-, border-, entre otras, facilitando la
         personalización de colores en el texto, fondos y bordes de los
         componentes.
       </p>
       <br/>
-      <p>Solo podran utilizarse los siguientes colores, por ejemplo bg-red-100 no estaría disponible</p>
+      <p>Solo podran utilizarse los siguientes colores:</p>
       <div>
         {[
           { dataName: 'color-background', data: backgroundColors },
