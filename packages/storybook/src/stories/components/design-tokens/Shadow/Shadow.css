@@ -1,16 +1,21 @@
+.container-shadows {
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+
 .shadows {
   display: flex;
   gap: 25px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .shadow {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 8px;
   padding: 20px;
-  width: 200px;
 
-  width: 150px;
+
   height: 100px;
   display: flex;
   flex-direction: column;
@@ -19,18 +24,6 @@
   color: #333;
   font-size: 20px;
   font-weight: bold;
-}
-
-.shadow-xl {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.shadow-2xl {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.shadow-3xl {
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 .shadow-label {
