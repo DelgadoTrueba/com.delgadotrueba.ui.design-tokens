@@ -1,0 +1,40 @@
+.shadows {
+  display: flex;
+  gap: 25px;
+}
+
+.shadow {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+
+  width: 150px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.shadow-xl {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-2xl {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-3xl {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-label {
+  color: #333;
+  margin-bottom: 2px;
+  font-size: 12px;
+}
