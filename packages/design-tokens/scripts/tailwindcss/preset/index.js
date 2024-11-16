@@ -26,12 +26,6 @@ StyleDictionary.registerFormat({
         );
       });
 
-    const tokensExtend = {
-      ..._tokens,
-    };
-    delete tokensExtend.colors;
-    delete tokensExtend.spacing;
-
     const rawSource = `
         ${header}
   
@@ -55,11 +49,7 @@ StyleDictionary.registerFormat({
   
         module.exports =
           {
-            theme: {
-              colors:  ${JSON.stringify(_tokens.colors)},
-              spacing:  ${JSON.stringify(_tokens.spacing)},
-              extend: ${JSON.stringify(tokensExtend)}
-            },
+            theme:  ${JSON.stringify(_tokens)},
             plugins: [
               /**
                * Custom plugin to convert \`text-style\` design token to the \`font\` css shorthand property
@@ -112,15 +102,16 @@ const mappings = [
   // { original: ['color', 'text-icon'], tailwindcss: ['colors', 'text-&-icon'] },
   { original: ['text-and-icon'], tailwindcss: ['colors', 'text-&-icon'] },
   { original: ['color'], tailwindcss: ['colors'] },
-  { original: ['line-weight'], tailwindcss: ['borderWidth'] },
-  { original: ['motion', 'duration'], tailwindcss: ['transitionDuration'] },
-  { original: ['motion', 'easing'], tailwindcss: ['transitionTimingFunction'] },
-  { original: ['radius'], tailwindcss: ['borderRadius'] },
+  // { original: ['line-weight'], tailwindcss: ['borderWidth'] },
+  // { original: ['motion', 'duration'], tailwindcss: ['transitionDuration'] },
+  // { original: ['motion', 'easing'], tailwindcss: ['transitionTimingFunction'] },
+  { original: ['size'], tailwindcss: ['spacing'] },
+  { original: ['shadow', 'general'], tailwindcss: ['boxShadow'] },
+  { original: ['radius', 'general'], tailwindcss: ['borderRadius'] },
   { original: ['typography', 'font-size'], tailwindcss: ['fontSize'] },
   { original: ['typography', 'font-family'], tailwindcss: ['fontFamily'] },
   { original: ['typography', 'font-weight'], tailwindcss: ['fontWeight'] },
   { original: ['typography', 'line-spacing'], tailwindcss: ['lineHeight'] },
-  { original: ['size'], tailwindcss: ['spacing'] },
   {
     original: ['typography', 'letter-spacing'],
     tailwindcss: ['letterSpacing'],
