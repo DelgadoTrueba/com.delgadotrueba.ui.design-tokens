@@ -1,19 +1,19 @@
 import './Font.css';
 
-const fonts = [
-  { label: 'Regular', weight: '400', className: 'regular' },
-  { label: 'Medium', weight: '500', className: 'medium' },
-  { label: 'Semi Bold', weight: '600', className: 'semi-bold' },
-  { label: 'Bold', weight: '700', className: 'bold' },
-  { label: 'Extra Bold', weight: '800', className: 'extra-bold' },
-];
+const FONT_WEIGHT_NAMES = {
+    200: 'extra-light',
+    400: 'normal',
+    500: 'medium',
+    700: 'bold',
+    800: 'extra-bold'
+};
 
-const FontBox = ({ label, weight, className }) => {
+const FontBox = ({style, weight, className }) => {
   return (
     <div class="font-box">
       <p class={`font-sample ${className}`}>Aa</p>
-      <p class="font-label">{label}</p>
-      <p class="font-weight">{weight}</p>
+      <p class="font-label">style: {style}</p>
+      <p class="font-label">weight: {FONT_WEIGHT_NAMES[weight]}</p>
     </div>
   );
 };
@@ -29,7 +29,7 @@ export const Font = ({fontName, fontData}) => {
             return (
                 <FontBox
                     key={key}
-                    label={value["font-style"]}
+                    style={value["font-style"]}
                     weight={value["font-weight"]}
                     class={value.className}
                 />
