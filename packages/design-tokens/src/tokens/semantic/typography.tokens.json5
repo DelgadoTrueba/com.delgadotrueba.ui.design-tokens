@@ -1,7 +1,7 @@
 {
   typography: {
     'font-face': {
-      sans: {
+      '{core.typography.font-family.sans.value}': {
         thin: {
           value: {
             'font-family': '{core.typography.font-family.sans.value}',
