@@ -1,0 +1,36 @@
+.container-radius {
+    margin: 0 auto;
+    margin-bottom: 32px;
+  }
+  
+  .radius {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .radius-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+  
+    
+    height: 100px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .radius-label {
+    color: #333;
+    margin-bottom: 2px;
+    font-size: 12px;
+  }
+  
