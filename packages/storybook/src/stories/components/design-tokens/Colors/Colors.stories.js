@@ -9,46 +9,46 @@ export default {
 import {
   transformarColores,
   filterObjectByString,
-  groupColorsByPrefix,
+  groupByPrefix,
   colors,
 } from './color.utils.jsx';
 
-const primaryColors = groupColorsByPrefix(
+const primaryColors = groupByPrefix(
   filterObjectByString(colors, 'color-primary'),
   3
 );
 
-const backgroundColors = groupColorsByPrefix(
+const backgroundColors = groupByPrefix(
   filterObjectByString(colors, 'color-background'),
   4
 );
 
-const uiBorderColor = groupColorsByPrefix(
+const uiBorderColor = groupByPrefix(
   filterObjectByString(colors, 'color-ui-border'),
   4
 );
 
-const uiStateColor = groupColorsByPrefix(
+const uiStateColor = groupByPrefix(
   filterObjectByString(colors, 'color-ui-state'),
   4
 );
 
-const uiColor = groupColorsByPrefix(
+const uiColor = groupByPrefix(
   filterObjectByString(colors, 'color-ui'),
   2
 );
 
-const funtionalColor = groupColorsByPrefix(
+const funtionalColor = groupByPrefix(
   filterObjectByString(colors, 'color-functional'),
   4
 );
 
-const additionalColor = groupColorsByPrefix(
+const additionalColor = groupByPrefix(
   filterObjectByString(colors, 'color-additional'),
   3
 );
 
-const textIconColor = groupColorsByPrefix(
+const textIconColor = groupByPrefix(
   filterObjectByString(colors, 'text-and-icon'),
   5
 );
